@@ -1,10 +1,10 @@
 # connection to twitter
 source("code/keys.R")
 
-setup_twitter_oauth(consumer_key    = consumer_key, 
-                   consumer_secret  = consumer_secret, 
-                   access_token     = access_token,
-                   access_secret    = access_secret)
+setup_twitter_oauth(consumer_key    = consumer_k, 
+                   consumer_secret  = consumer_s, 
+                   access_token     = access_t,
+                   access_secret    = access_s)
 
 # gathering of tweets for the specified word
 tweet_list <- searchTwitter(keyword, n = 1000)  
