@@ -8,12 +8,27 @@ shinyUI(navbarPage(theme = "bootstrap.css" ,id = "bar" ,
                             ),
                    tabPanel(HTML("TweetIT</a></li><li><a style='color:#3399FF' 
                                  href=\"https://it.linkedin.com/in/cirilloandrea\">by Andrea Cirillo</a>"),
-                            h3(""),
+                            fluidRow(
+                              column(4),
+                              column(4,
+                            div(style = "text-align: center;",
                             textInput("selected_keyword",h3("input keyword to look for on Twitter")),
                                       radioButtons("selected_language",
-                                                   "select language",
+                                                   h3("select language"),
                                                    choices = c("italian","english"),
-                                                   inline = TRUE)
+                                                   inline = FALSE)
+                            )
+                            ),
+                            
+                            column(4)),
+                            fluidRow(
+                            div(style = "text-align: center;",
+                            bsButton("sentiment","sentimentIT",
+                                     style = "default",size = "large")
+                            )
+                            )
+                            
+                            
                                       ),
                    windowTitle = "TweetIT"
                                       )
