@@ -4,7 +4,7 @@ library(ROAuth)
 library(plyr)
 library(stringr)
 library(ggplot2)
-library(httr)
+
 library(plyr)  
 library(stringr)       
 library(reshape2)
